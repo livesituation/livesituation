@@ -1,0 +1,13 @@
+application: livesituation
+module: main_module
+version: 0
+runtime: go
+api_version: go1
+
+handlers:
+- url: /.*
+  script: _go_app
+
+automatic_scaling:
+  min_idle_instances: 1
+  max_pending_latency: 1s
